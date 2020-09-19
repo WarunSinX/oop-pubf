@@ -7,6 +7,9 @@ public class PUBFGame {
         this.battleField = f;
         this.players = p;
 
+        for (Player player : players) {
+            System.out.println("Player: " + player.getName());
+        }
     }
 
     // maxNumRounds is another class for num the round.
