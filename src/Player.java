@@ -39,7 +39,7 @@ public class Player {
 
     public boolean isAlive() {
         // Please implement this
-        if (this.health == 0) {
+        if (this.health > 0) {
             return false;
         } else
             return true;
