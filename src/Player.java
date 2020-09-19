@@ -18,6 +18,7 @@ public class Player {
 
     }
 
+
     public void print() {
         // Please implement this
         System.out.print(this.name.charAt(0)); //charAt -> choose the letter in first array 
@@ -52,5 +53,16 @@ public class Player {
             return true;
         }
         else return false;
+    }
+    public void getAt(){
+        System.out.print(xLoc+","+yLoc);
+    }
+    public int getAtkDmg(){
+        return this.attackDamage;
+    }
+    public int getAtkRange(){
+        //use
+        //manhattan
+        return this.attackRange;
     }
 }
