@@ -53,8 +53,12 @@ public class Player {
             return false;
     }
 
-    public void getAt() {
-        System.out.print(xLoc + "," + yLoc);
+    public int getX() {
+        return xLoc;
+    }
+
+    public int getY() {
+        return yLoc;
     }
 
     public int getAtkDmg() {
