@@ -1,5 +1,5 @@
 public class BattleField {
-    //attb
+    // attb
     private int maxX;
     private int maxY;
 
@@ -9,10 +9,11 @@ public class BattleField {
         this.maxY = maxY;
     }
 
-    public int getMaxX(){
+    public int getMaxX() {
         return maxX;
     }
-    public int getMaxY(){
+
+    public int getMaxY() {
         return maxY;
     }
 }
