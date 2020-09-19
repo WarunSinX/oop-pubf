@@ -61,7 +61,7 @@ public class Player {
         return this.attackDamage;
     }
     public int getAtkRange(){
-        //use
+        //use int distance = Math.abs(x1-x0) + Math.abs(y1-y0);
         //manhattan
         return this.attackRange;
     }
