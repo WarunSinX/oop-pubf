@@ -61,6 +61,10 @@ public class Player {
         return yLoc;
     }
 
+    public void setHealth(int n) {
+        health = n;
+    }
+
     public int getAtkDmg() {
         return this.attackDamage;
     }
