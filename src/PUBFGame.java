@@ -14,17 +14,17 @@ public class PUBFGame {
     }
 
     
-    // not finished will be up to date.
+    
     public void play(int maxNumRounds) {
         // Please implement this
         int check=0;
         for (int i = 1; i <= maxNumRounds; i++) {
-            for(int j=1; j<= players.length; j++){
-                {players[j].isAlive();
+            for(int j=0; j<= players.length; j++){
+                players[j].isAlive();
                  check++;
-                }
+            }
             //check the players that alive.    
-            if (check>0) { // in if about the game is not over yet.(all player is alive)
+            if (check>0) { //if check more than 0 its mean have players alive.
                 System.out.println("Round " + i);
                 
                 
@@ -33,13 +33,13 @@ public class PUBFGame {
                 break;
             }
             
-            for (int j = 0; j < players.length; j++) {
-                if (players[j].isAlive()) {
-                    System.out.println(players[j].getName() + " survives!");
+            for (int k = 0; k < players.length; k++) {
+                if (players[k].isAlive()) {
+                    System.out.println(players[k].getName() + " survives!");
                 }
             }
 
-        }
+            }
         
     }
 
@@ -55,7 +55,7 @@ public class PUBFGame {
         // Please implement this
 
         // start check around in each player.
-
+        
         // alive players can shoot , Dead can't
     }
 
