@@ -16,7 +16,7 @@ public class PUBFGame {
         // Please implement this
         int check = 0;
         for (int i = 1; i <= maxNumRounds; i++) {
-            for (int j = 0; j <= players.length; j++) {
+            for (int j = 0; j < players.length; j++) {
                 players[j].isAlive();
                 check++;
             }
@@ -25,7 +25,7 @@ public class PUBFGame {
                 System.out.println("Round " + i);
 
             } else {
-                System.out.println("There is no winner.");
+                System.out.println("There is no winner!");
                 break;
             }
 
