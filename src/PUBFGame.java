@@ -1,6 +1,7 @@
 public class PUBFGame {
     private Player[] players;
     private BattleField battleField;
+    
 
     public PUBFGame(BattleField f, Player[] p) {
         // Please implement this
@@ -12,19 +13,26 @@ public class PUBFGame {
         }
     }
 
-    // maxNumRounds is another class for num the round.
+    
     // not finished will be up to date.
     public void play(int maxNumRounds) {
         // Please implement this
+        int check=0;
         for (int i = 1; i <= maxNumRounds; i++) {
-            if (players[0].isAlive()) { // in if about the game is not over yet.(all player is alive)
+            for(int j=1; j<= players.length; j++){
+                {players[j].isAlive();
+                 check++;
+                }
+            //check the players that alive.    
+            if (check>0) { // in if about the game is not over yet.(all player is alive)
                 System.out.println("Round " + i);
-                // players[i].isAlive() AJ. told that player 1 will always to win. So not to
-                // loop for find all players that alive.
+                
+                
             } else {
                 System.out.println("There is no winner.");
                 break;
             }
+            
             for (int j = 0; j < players.length; j++) {
                 if (players[j].isAlive()) {
                     System.out.println(players[j].getName() + " survives!");
@@ -32,6 +40,7 @@ public class PUBFGame {
             }
 
         }
+        
     }
 
     public boolean playOneRound() {
