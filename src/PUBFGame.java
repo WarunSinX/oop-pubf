@@ -52,9 +52,9 @@ public class PUBFGame {
         // start check around in each player.
         // use int distance = Math.abs(x1-x0) + Math.abs(y1-y0);
         int distance;
-        for (int i = 0; i <= players.length; i++) {
+        for (int i = 0; i < players.length; i++) {
             if (players[i].isAlive()) {
-                for (int j = 0; j <= players.length; j++) {
+                for (int j = 0; j < players.length; j++) {
                     if (i != j) {
                         if (players[j].isAlive()) {
                             distance = Math.abs(players[j].getX() - players[i].getX())
