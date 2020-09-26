@@ -70,9 +70,6 @@ public class Player {
     }
 
     public int getAtkRange() {
-        // use int distance = Math.abs(x1-x0) + Math.abs(y1-y0);
-        // manhattan
-        
         return this.attackRange;
     }
 }
