@@ -84,7 +84,7 @@ public class PUBFGame {
     protected void phase3RemoveInvalidPlayers() {
         // Please implement this
         for (int i = 0; i < players.length; i++) {
-            for (int j = i; j < players.length; j++) {
+            for (int j = i; j < players.length - 1; j++) {
                 if (players[i].isAlive() && players[j + 1].isAlive()) {
                     if (players[i].getX() == players[j + 1].getX() && players[i].getY() == players[j + 1].getY()) {
                         players[i].setHealth(0);
