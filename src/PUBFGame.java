@@ -44,7 +44,7 @@ public class PUBFGame {
         phase2PlayersMove();
         phase3RemoveInvalidPlayers();
         phase4PrintBattleField();
-        return phase5FindWinner();
+        return phase5Gameover();
     }
 
     protected void phase1PlayersTakeAction() {
@@ -125,8 +125,8 @@ public class PUBFGame {
             }
         }
         if (countPL == 1 || countPL == 0)
-            return false;
-        else
             return true;
+        else
+            return false;
     }
 }
