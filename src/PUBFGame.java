@@ -23,18 +23,18 @@ public class PUBFGame {
             // check the players that alive.
             if (check > 0) { // if check more than 0 its mean have players alive.
                 System.out.println("Round " + i);
-
+                this.playOneRound();
             } else {
                 System.out.println("There is no winner!");
                 break;
             }
 
-            for (int k = 0; k < players.length; k++) {
-                if (players[k].isAlive()) {
-                    System.out.println(players[k].getName() + " survives!");
-                }
-            }
+        }
 
+        for (int k = 0; k < players.length; k++) {
+            if (players[k].isAlive()) {
+                System.out.println("The winner is " + players[k].getName() + "!");
+            }
         }
 
     }
