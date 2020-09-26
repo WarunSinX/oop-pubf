@@ -116,7 +116,7 @@ public class PUBFGame {
         System.out.println("");
     }
 
-    protected boolean phase5FindWinner() {
+    protected boolean phase5Gameover() {
         // Please implement this
         int countPL = 0;
         for (int i = 0; i < players.length; i++) {
