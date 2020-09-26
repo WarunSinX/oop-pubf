@@ -83,6 +83,7 @@ public class PUBFGame {
 
     protected void phase3RemoveInvalidPlayers() {
         // Please implement this
+        // Todo : Remove last invalid player
         for (int i = 0; i < players.length; i++) {
             for (int j = i; j < players.length - 1; j++) {
                 if (players[i].isAlive() && players[j + 1].isAlive()) {
