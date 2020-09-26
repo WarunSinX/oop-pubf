@@ -14,20 +14,20 @@ public class Test4 {
         Player[] players = {};
         BattleField f = new BattleField(10, 12);
         PUBFGame g = new PUBFGame(f, players);
-        if (!g.phase5FindWinner()) {
+        if (!g.phase5Gameover()) {
             System.out.println("Fail1!");
             return;
         }
 
         Player[] players2 = { new Player(1, 2, "Oak") };
         g = new PUBFGame(f, players2);
-        if (!g.phase5FindWinner()) {
+        if (!g.phase5Gameover()) {
             System.out.println("Fail2!");
             return;
         }
         Player[] players3 = { new Player(1, 2, "Oak"), new Player(2, 2, "Bb") };
         g = new PUBFGame(f, players3);
-        if (g.phase5FindWinner()) {
+        if (g.phase5Gameover()) {
             System.out.println("Fail3!");
             return;
         }
