@@ -1,7 +1,6 @@
 public class PUBFGame {
     private Player[] players;
     private BattleField battleField;
-    
 
     public PUBFGame(BattleField f, Player[] p) {
         // Please implement this
@@ -13,34 +12,31 @@ public class PUBFGame {
         }
     }
 
-    
-    
     public void play(int maxNumRounds) {
         // Please implement this
-        int check=0;
+        int check = 0;
         for (int i = 1; i <= maxNumRounds; i++) {
-            for(int j=0; j<= players.length; j++){
+            for (int j = 0; j <= players.length; j++) {
                 players[j].isAlive();
-                 check++;
+                check++;
             }
-            //check the players that alive.    
-            if (check>0) { //if check more than 0 its mean have players alive.
+            // check the players that alive.
+            if (check > 0) { // if check more than 0 its mean have players alive.
                 System.out.println("Round " + i);
-                
-                
+
             } else {
                 System.out.println("There is no winner.");
                 break;
             }
-            
+
             for (int k = 0; k < players.length; k++) {
                 if (players[k].isAlive()) {
                     System.out.println(players[k].getName() + " survives!");
                 }
             }
 
-            }
-        
+        }
+
     }
 
     public boolean playOneRound() {
@@ -56,17 +52,18 @@ public class PUBFGame {
         // start check around in each player.
         // use int distance = Math.abs(x1-x0) + Math.abs(y1-y0);
         int distance;
-        for(int i=0;i<= players.length;i++){
-            if(players[i].isAlive()){
-                for(int j=0;j<=players.length;j++){
-                    if(i!=j){
-                        if(players[j].isAlive()){
-                         distance =  Math.abs(players[j].getX()-players[i].getX()) + Math.abs(players[j].getY()-players[i].getY());
-                         //get distance to check with atkRange to check that can shoot or not?
-                         if(players[i].getAtkRange()>=distance){
-                             //setHealth the player[j] that was shooted by player[i]
-                          players[j].setHealth(players[i].getHealth() - players[j].getAtkDmg()) ;
-                         }
+        for (int i = 0; i <= players.length; i++) {
+            if (players[i].isAlive()) {
+                for (int j = 0; j <= players.length; j++) {
+                    if (i != j) {
+                        if (players[j].isAlive()) {
+                            distance = Math.abs(players[j].getX() - players[i].getX())
+                                    + Math.abs(players[j].getY() - players[i].getY());
+                            // get distance to check with atkRange to check that can shoot or not?
+                            if (players[i].getAtkRange() >= distance) {
+                                // setHealth the player[j] that was shooted by player[i]
+                                players[j].setHealth(players[i].getHealth() - players[j].getAtkDmg());
+                            }
                         }
                     }
                 }
@@ -77,6 +74,11 @@ public class PUBFGame {
 
     protected void phase2PlayersMove() {
         // Please implement this
+        for (int i = 0; i < players.length; i++) {
+            if (players[i].isAlive()) {
+                players[i].move(battleField.getMaxX(), battleField.getMaxY());
+            }
+        }
     }
 
     protected void phase3RemoveInvalidPlayers() {
