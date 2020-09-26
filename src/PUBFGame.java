@@ -64,7 +64,8 @@ public class PUBFGame {
                          distance =  Math.abs(players[j].getX()-players[i].getX()) + Math.abs(players[j].getY()-players[i].getY());
                          //get distance to check with atkRange to check that can shoot or not?
                          if(players[i].getAtkRange()>=distance){
-                         
+                             //setHealth the player[j] that was shooted by player[i]
+                          players[j].setHealth(players[i].getHealth() - players[j].getAtkDmg()) ;
                          }
                         }
                     }
