@@ -1,3 +1,5 @@
+import java.util.ArrayList;
+
 public class PUBFGame {
     private Player[] players;
     private BattleField battleField;
@@ -85,16 +87,22 @@ public class PUBFGame {
 
     protected void phase3RemoveInvalidPlayers() {
         // Please implement this
-        // Todo : Remove last invalid player
+
+        ArrayList<Integer> stupidPlayerIndex = new ArrayList<Integer>();
+
         for (int i = 0; i < players.length; i++) {
             for (int j = i; j < players.length - 1; j++) {
                 if (players[i].isAlive() && players[j + 1].isAlive()) {
                     if (players[i].getX() == players[j + 1].getX() && players[i].getY() == players[j + 1].getY()) {
-                        players[i].setHealth(0);
-                        players[j + 1].setHealth(0);
+                        stupidPlayerIndex.add(i);
+                        stupidPlayerIndex.add(j + 1);
                     }
                 }
             }
+        }
+
+        for (int i = 0; i < stupidPlayerIndex.size(); i++) {
+            players[stupidPlayerIndex.get(i)].setHealth(0);
         }
     }
 
