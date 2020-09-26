@@ -31,10 +31,10 @@ public class Player {
     public void move(int maxX, int maxY) {
         // Please implement this
         if (xLoc < maxX - 1) {
-            this.xLoc = xLoc + 1;
-        } else if (xLoc == maxX - 1)
-            this.yLoc = yLoc - 1;
-
+            xLoc += 1;
+        } else if (yLoc < maxY - 1) {
+            yLoc += 1;
+        }
     }
 
     public boolean isAlive() {
