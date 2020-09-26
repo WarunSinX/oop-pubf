@@ -39,10 +39,7 @@ public class Player {
 
     public boolean isAlive() {
         // Please implement this
-        if (this.health > 0) {
-            return false;
-        } else
-            return true;
+        return health > 0 ? true : false;
     }
 
     public boolean isAt(int i, int j) {
@@ -64,6 +61,7 @@ public class Player {
     public void setHealth(int n) {
         health = n;
     }
+
     public int getHealth() {
         return this.health;
     }
