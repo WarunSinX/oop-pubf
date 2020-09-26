@@ -16,12 +16,15 @@ public class PUBFGame {
         // Please implement this
         int check = 0;
         for (int i = 1; i <= maxNumRounds; i++) {
+            check = 0;
             for (int j = 0; j < players.length; j++) {
-                players[j].isAlive();
-                check++;
+                if (players[j].isAlive())
+                    check++;
             }
             // check the players that alive.
-            if (check > 0) { // if check more than 0 its mean have players alive.
+            if (check == 1) { // if check more than 0 its mean have players alive.
+                break;
+            } else if (check > 1) {
                 System.out.println("Round " + i);
                 this.playOneRound();
             } else {
@@ -36,7 +39,6 @@ public class PUBFGame {
                 System.out.println("The winner is " + players[k].getName() + "!");
             }
         }
-
     }
 
     public boolean playOneRound() {
