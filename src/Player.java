@@ -64,6 +64,9 @@ public class Player {
     public void setHealth(int n) {
         health = n;
     }
+    public int getHealth() {
+        return this.health;
+    }
 
     public int getAtkDmg() {
         return this.attackDamage;
