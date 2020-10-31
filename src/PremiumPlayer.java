@@ -5,6 +5,6 @@ public class PremiumPlayer extends Player {
 
     @Override
     public String getName() {
-        return this.name + "¬__¬";
+        return this.name + "(¬__¬)";
     }
 }
