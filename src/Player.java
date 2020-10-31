@@ -1,11 +1,11 @@
 public class Player {
     // attrb
-    private int xLoc;
-    private int yLoc;
-    private int health;
-    private String name;
-    private int attackDamage;
-    private int attackRange;
+    protected int xLoc;
+    protected int yLoc;
+    protected int health;
+    protected String name;
+    protected int attackDamage;
+    protected int attackRange;
 
     public Player(int x, int y, String n) {
         // Please implement this
