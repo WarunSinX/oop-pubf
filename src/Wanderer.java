@@ -6,7 +6,7 @@ public class Wanderer extends Player {
     @Override
     public void move(int maxX, int maxY) {
         if (yLoc < maxY - 1) {
-            yLoc -= 1;
+            yLoc += 1;
         } else if (xLoc < maxX - 1) {
             xLoc += 1;
         }
