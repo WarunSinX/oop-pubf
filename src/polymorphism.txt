@@ -1,0 +1,56 @@
+In Beta Create the New class that for new types of player 
+that contain PremiumPlayer , Sniper , Warrior , Wanderer , StrongWanderer
+In each class we extends from Player class that super class for Other clss that create new , exept StrongWanderer class that extend from Wanderer class.
+
+
+
+
+1.PremiumPlayer this player that premium in name will have special emoji that show to be cool player and rich.
+    so, in this class will be sub-class of Player class. and next Override the getName mathod that to print the Cool name more than Others player. We Override that method to print name and emoji.
+    Line 1 write extends Player for use method and attbr same Player class.
+    Line 2-4 write constructor that use super for use same get attbr same Player class
+    Line 6 Override to write like a new version for this class.
+    Line 7-8 Override getName method that print the name of player but the special one that add more, it have emoji that so cool 
+            so, we write + "(¬__¬)" for print the cool one.
+
+
+
+2.Sniper this class will be extend from player class and Name of this class is sniper, so everyone know sniper have to shoot or attack range more others player (That not hack player LOL).
+    In Sniper class that sub class of Player class. and set the attackRange become 2 we can set it in Constructor.
+    Line 1 Write extend Player for use method and use attbr same Player class.
+    Line 2-3 Write constructor that use super for get constructor same Player class 
+    Line 4 set attackRange to 2 for sniper player that can attack far more other player.
+
+
+
+
+
+3.Warrior this class will be extend from Player class and When people think aboutt the warrior, warrior will be endure more normal player. So the health of this types of player will be more than others player.
+    In Warrior class that sub-class of Player class and set the health become 3 we can set it in Constructor.
+    Line 1 Write extend Player for use method and use attbr same Player class.
+    Line 2-3 Write constructor that use super for get constructor same Player class 
+    Line 4 set health to 3 for Warrior player that endure more.
+
+
+
+
+4.Wanderer this class that sub-class of Player class and then the different thing of this types of player that is the moving of player Wanderer will move to south first and if can move to south becoz will move out of battelfield it will move to east and if cant move to east it will stay in same location.
+    so, Wanderer class will extend Player class and next Override in Move method to move south and then move east.
+    Line 1 Write extend Player for use method or use attbr same Player class.
+    Line 2-3 Write constructor that use super for get constructor same Player class 
+    Line 6 Override to write the new version of method in this class.
+    Line 8 wirte if yLoc < maxY - 1. if position of player less than the battle field of vertical axis;
+    Line 9 yLoc -= 1 the position of vertical axis's player will move south or -1.
+    Line 10 xLoc < maxX - 1 . if position of player less than the battle field of horizontal axis.
+    Line 11 xLoc +=1 the postion of player will move to right or east follow the horizontal axis of battle field.  
+
+
+
+
+
+5.StrongWanderer this class extend from Wanderer class but StrongWanderer will have more power or atk than Wanderer Player 
+    so, StrongWanderer class that sub-class of Wanderer and set the atkDamage to 2.
+    Line 1 extend Player class for use the method and attbr same Wanderer class.
+    Line 3 use super for set attbr same as contructor of Wanderer class.
+    Line 4 set the atkDamage to 2 for the StrongWanderer have damage more than other player.
+    
